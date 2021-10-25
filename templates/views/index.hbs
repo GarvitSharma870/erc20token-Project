@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fstdropdown.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- Canvas -->
+  <canvas class="orb-canvas"></canvas>
+  <!-- Overlay -->
+  <div class="overlay" style="display: flex;
+    align-items: center;
+    justify-content: center;
+">
+    <!-- Overlay inner wrapper -->
+    <!-- Title -->
+    <form action="/token" method="POST" class="col-md-8 col-sm-8">
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Compromised Public Key</label>
+        <input type="text" class="form-control" name="cpublickey" id="cpublickey" required placeholder="Enter Compromised Public Key">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">New Public Key</label>
+        <input type="text" class="form-control" name="publickey" id="publickey" required placeholder="Enter new Public Key">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Private Key</label>
+        <input type="text" class="form-control" name="privatekey" id="privatekey" required placeholder="Private Key">
+      </div>
+      <div class="form-group">
+        <div>
+  <select name="token" id="token" class="js-source-states fstdropdown-select" required id="first">
+    <option value="">Select Token</option>
+      {{#each title}}
+        <option value={{this.addr}}>{{this.name}}</option>
+      
+      {{/each}}
+      
+  </select>
+</div>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Email address</label>
+        <input type="email" name="email" id='email' class="form-control" required placeholder="Enter your Email">
+      </div>
+
+      <center><input type="submit" class="btn btn-primary" value="Submit"></center>
+    </form>
+  </div>
+  <script src="js/fstdropdown.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
